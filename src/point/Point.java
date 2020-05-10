@@ -1,22 +1,13 @@
-public class Point {
+package point;
 
+public class Point {
     private double x;
     private double y;
     private double cof;
 
-
-    public Point(double x, double y,double cof) {
+    public Point(double x, double y, double cof) {
         this.x = x;
         this.y = y;
-        this.cof = cof;
-
-    }
-
-    public double getCof() {
-        return cof;
-    }
-
-    public void setCof(double cof) {
         this.cof = cof;
     }
 
@@ -25,6 +16,7 @@ public class Point {
     }
 
     public void setX(double x) {
+
         this.x = x;
     }
 
@@ -34,5 +26,16 @@ public class Point {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    public double getCof() {
+        return cof;
+    }
+
+    public void setCof(double cof) throws CofExeption {
+        if ( cof < 0) {
+                throw new CofExeption("Cof is incorrect!");
+        }
+        this.cof = cof;
     }
 }

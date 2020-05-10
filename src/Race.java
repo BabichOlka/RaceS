@@ -1,26 +1,36 @@
+
+import point.Point;
+import point.Rout;
+import transport.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Race {
-    public static void main(String[] args) {
+    public static <Transport> void main(String[] args) {
         Rout rout = generateRout();
-//        BMW bmw = generateBMW();
-//        Volvo volvo = generateVolvo();
-//        bmw.setCurrentPosition(rout.getPointList().get(0));
-//        volvo.setCurrentPosition(rout.getPointList().get(0));
+
         System.out.println("Do you want to stsrt? y/n ?");
+        try{
         Scanner in = new Scanner(System.in);
         if (in.next().equals("y"))
         System.out.println("Start!");
-
-        System.out.println("Please, choose your car: BMW, Volvo, Opel, Car (as Default)");
+        String input = in.next();
+        if (input != "y" & "n" ){
+            throw new Exception("You pressed the wrong button");
+             }
+        }
+        catch (Exception e){
+            e.getMessage();
+        }
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please, choose your car:BMW, Volvo, Opel, Car (as Default)");
         String playerCarName = in.next();
-        Transport playerCar = TransportFactory.getTransportbyName(playerCarName);
+        Car playerCar =  TransportFactory.getTransportbyName(playerCarName);
 
         System.out.println("Please, choose enemy car: BMW, Volvo, Opel, Car (as Default)");
         String enemyCarName = in.next();
-        Transport enemyCar = TransportFactory.getTransportbyName(enemyCarName);
+        Car enemyCar =  TransportFactory.getTransportbyName(enemyCarName);
 
         enemyCar.setCurrentPosition(rout.getPointList().get(0));
         playerCar.setCurrentPosition(rout.getPointList().get(0));
@@ -39,17 +49,7 @@ public class Race {
         return new Rout(points);
 
 }
-//      static BMW generateBMW(){
-//        Engine bmwEngine = new Engine("BMWE",5);
-//        Wheels bmwWheels = new Wheels("BMWW", Math.random());
-//        return new BMW("BMW", bmwEngine, bmwWheels, null );
-// }
-//    static Volvo generateVolvo(){
-//        Engine volvoEngine = new Engine("VolvoE",10);
-//        Wheels volvoWheels = new Wheels("VolvoW", Math.random());
-//        return new Volvo("Volvo", volvoEngine, volvoWheels, null );
-    //}
-    static void startGame(Rout rout, Transport player,Transport enemy){
+    static void startGame(Rout rout, Car player,Car enemy){
         String input = "y";
         int iPlayer = 0;
         int iEnemy = 0;

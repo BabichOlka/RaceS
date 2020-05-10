@@ -1,4 +1,7 @@
-import java.util.ArrayList;
+package point;
+
+import point.Point;
+
 import java.util.List;
 
 public class Rout {

@@ -1,6 +1,6 @@
-import java.util.Random;
+package transport;
 
-public class Wheels extends  TransportComponent {
+public class Wheels extends TransportComponent {
 
 
     private double cof;

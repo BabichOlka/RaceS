@@ -1,3 +1,5 @@
+package transport;
+
 public class TransportComponent {
     private String name;
     public TransportComponent(String name){

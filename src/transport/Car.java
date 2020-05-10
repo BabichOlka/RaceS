@@ -1,4 +1,6 @@
-import java.util.List;
+package transport;
+
+import java.awt.*;
 
 public class Car extends Transport {
 
