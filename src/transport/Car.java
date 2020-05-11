@@ -1,6 +1,8 @@
 package transport;
 
 import java.awt.*;
+import point.CofExeption;
+import point.Point;
 
 public class Car extends Transport {
 
