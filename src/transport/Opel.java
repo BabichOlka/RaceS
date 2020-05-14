@@ -1,4 +1,5 @@
 package transport;
+import point.Point;
 
 public class Opel extends Car {
 

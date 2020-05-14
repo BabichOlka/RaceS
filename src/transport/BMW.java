@@ -1,6 +1,7 @@
 package transport;
 
 import java.awt.*;
+import point.Point;
 
 public class BMW extends Car {
 

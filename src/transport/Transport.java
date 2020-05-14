@@ -7,7 +7,7 @@ import point.Point;
 import point.Rout;
 
 
-abstract class Transport {
+public class Transport {
     private int currentSpeed;
     private Point currentPosition;
     private String name;

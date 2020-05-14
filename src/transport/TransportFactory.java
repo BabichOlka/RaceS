@@ -19,17 +19,18 @@ public class TransportFactory {
       Class<?> curClass;
 
         try{ curClass = Class.forName("transport."+carInput);
+          //  Engine engine = new Engine();
+           // Wheels wheels = new Wheels();
             Class[] param ={String.class, Engine.class, Wheels.class, Point.class};
             return (Car) curClass.getConstructor(param)
                     .newInstance("Defoltclass",new Engine("DE",20),new Wheels("Dw",Math.random()),null);
         } catch (ClassNotFoundException | InstantiationException |
                 IllegalAccessException| NoSuchMethodException | InvocationTargetException e ){
             e.printStackTrace();}
-            return null;
+        return null;
+        } ;
 
 
-
-        }
     public static BMW getBMW(String carInput){
 
         Class<?> curClass;

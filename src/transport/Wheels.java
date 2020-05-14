@@ -1,13 +1,17 @@
 package transport;
 
-public class Wheels extends TransportComponent {
+public class Wheels  {
 
 
     private double cof;
 
-    public Wheels(String name, double cof) {
-        super(name);
+    public Wheels(double cof) {
         this.cof = cof;
+    }
+
+    public Wheels(String name, double cof) {
+
+
           }
 
     public double getCof() {

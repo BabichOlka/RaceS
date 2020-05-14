@@ -1,12 +1,12 @@
 package transport;
 
-public class Engine extends TransportComponent {
+public class Engine  {
 
 
     private int maxSpeed;
 
     public Engine(String name, int maxSpeed) {
-        super(name);
+
         this.maxSpeed = maxSpeed;
     }
 
